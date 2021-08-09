@@ -2,9 +2,9 @@ from telethon import TelegramClient, events
 import json
 import requests
 
-APP_ID=60138 #my.telegram.org
-APP_HASH='1d39943fac785545ac1cc8' #my.telegram.org
-BOTT='1814562442:AAENHjj2ajNyvG2LYY-a0'#@botfather
+APP_ID=3550946 #my.telegram.org
+APP_HASH='6235d84de3799a511c4e609d1a0bddb5' #my.telegram.org
+BOTT='1917451466:AAGjdurRL3mxHUXjQ0neZEuCOkbWON2m0XY'#@botfather
 
 bot = TelegramClient('bot', APP_ID, APP_HASH).start(bot_token=BOTT)
 
@@ -15,18 +15,18 @@ def staat(qq):
   data = {
     "chat_id": str(qq),
     "photo": "https://telegra.ph/file/444f0805649cfcdf19112.jpg",
-    "caption": "Get instant access to Corona in Sri Lanka 📊 .  Automatically retrieve the latest corona information after adding it to the @SLCovid19slbzonebot Group 🦠 . Use /help for more information. @sl_bot_zone ",
+    "caption": "Get instant access to Corona in Sri Lanka .  Automatically retrieve the latest corona information after adding it to the @SLCovid19_Bot Group 🦠 . Use /help for more information. @Theekshana_Official ",
     "parse_mode": "HTML",
     "reply_markup": {
         "inline_keyboard": [
             [
                 {
-                    "text": " 💎 Youtube  ",
-                    "url": "https://www.youtube.com/channel/UCvYfJcTr8RY72dIapzMqFQA"
+                    "text": " Channel  ",
+                    "url": "https://t.me/Theekshana_Official"
                 }, 
                 {
-                    "text": " 🔔 Channel",
-                    "url": "https://t.me/sl_bot_zone"
+                    "text": "Support",
+                    "url": "https://t.me/Theekshana_Support"
                 }
             ]
         ]
@@ -55,29 +55,29 @@ def staa():
                     '<b>CURRENT SITUATION</b>' + '\n' + '\n' + '<b>' +
                     update_date_time + ' now </b>' + '\n' + '\n' +
                     '<b>🇱🇰 Situation in Sri Lanka</b>' + '\n' + '\n'  +
-                    '🤒 Number of confirmed patients (cumulative) = ' + '<code>' +
+                    'Number of confirmed patients (cumulative) = ' + '<code>' +
                     local_total_cases + '</code>' + '\n' +
-                    '🤕 Number of patients receiving treatment = ' + '<code>' + local_active_cases + '</code>' +
-                    '\n' + '😷 Number of new patients = ' + '<code>' + local_new_cases + '</code>' +
+                    'Number of patients receiving treatment = ' + '<code>' + local_active_cases + '</code>' +
+                    '\n' + 'Number of new patients = ' + '<code>' + local_new_cases + '</code>' +
                     '\n' +
-                    '🏥 Persons currently under investigation in hospitals = ' + '<code>' +
+                    'Persons currently under investigation in hospitals = ' + '<code>' +
                     local_total_number_of_individuals_in_hospitals +  '</code>' + '\n' +
-                    '🙂 The number of people who have recovered and left = ' + '<code>' + local_recovered + '</code>' + 
+                    'The number of people who have recovered and left = ' + '<code>' + local_recovered + '</code>' + 
                     '\n' + '⚰ Number of deaths = ' + '<code>'  + local_deaths + '</code>' + '\n' +
-                    '\n' + '<b>🌎 Worldwide status</b>' + '\n' +
-                    '\n' + '🤒 Number of confirmed patients (cumulative) = ' '<code>'  +
-                    global_total_cases + '</code>' + '\n' + '😷 Number of new patients = ' '<code>'  +
+                    '\n' + '<b>Worldwide status</b>' + '\n' +
+                    '\n' + 'Number of confirmed patients (cumulative) = ' '<code>'  +
+                    global_total_cases + '</code>' + '\n' + 'Number of new patients = ' '<code>'  +
                     global_new_cases + '</code>' + '\n' + '⚰ Number of deaths = ' '<code>'  +
-                    global_deaths + '</code>' + '\n' + '🙂 Healed number = ' '<code>'  +
+                    global_deaths + '</code>' + '\n' + 'Healed number = ' '<code>'  +
                     global_recovered + '</code>' + '\n' + '\n' + '\n' +
-                    '✅ All information is provided by the government and reputable sources' + '\n' +
-                    '~ @sl_bot_zone 🇱🇰 ~')
+                    'All information is provided by the government and reputable sources' + '\n' +
+                    '~ @Theekshana_Official~')
     return textt
 
 
 def sta():
          r = requests.get(f"https://corona.lmao.ninja/v2/countries/{variabla}").json()
-         reply_text = f"**රට {r['country']} 🦠**\n🤒 Number of confirmed patients (cumulative) = {r['cases']:,}\n😷 Number of new patients= {r['todayCases']:,}\n⚰ Number of deaths = {r['deaths']:,}\n⚰ New death toll= {r['todayDeaths']:,}\n🙂 Healed number =  {r['recovered']}"
+         reply_text = f"**රට {r['country']} **\nNumber of confirmed patients (cumulative) = {r['cases']:,}\nNumber of new patients= {r['todayCases']:,}\n⚰ Number of deaths = {r['deaths']:,}\n⚰ New death toll= {r['todayDeaths']:,}\nHealed number =  {r['recovered']}"
          message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN)
 
 
